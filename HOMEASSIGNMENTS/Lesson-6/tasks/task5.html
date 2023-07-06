@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 8.</h1>
+  <p>
+    Вивести на екран послідовність символів а о а о а о а о а о …Всього символів 82.
+  </p>
+
+  <script>
+
+    //1.Введення величин, 
+    const symbolA = 'a'
+    const symbolO = 'o'
+    let symbolS = "";
+
+    //2.Розв"язок задачі
+    for (let q = 0; q < 41; q++) {
+      symbolS += (` ${symbolA + symbolO}`);
+    }
+    //3.Виводимо результат
+    document.write(` ${symbolS}\n`);
+
+
+
+  </script>
+</body>
+
+</html>

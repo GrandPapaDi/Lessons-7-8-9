@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 3</h1>
+    <p>
+      Дано вартість одиниці товару і кількість.</br>Знайти загальну вартість та ПДВ
+      (5% від загальної вартості).
+    </p>
+    <script>        
+        //1. Вводимо необхідні дані
+        let costGoods = parseFloat(prompt('Введіть вартість одиниці товару:', 0))
+        let numberGoods = parseInt(prompt('Введіть кількість одиниць товару:', 0))
+
+        //2. Знаходимо результат
+        let totalСostGoods = costGoods * numberGoods
+        let incomeTax = totalСostGoods / 100 * 5
+
+        //3. Виводимо результат
+        document.write(`<p>Загальна вартість товару без ПДВ: ${totalСostGoods}</p>
+        <p>ПДВ (5% від загальної вартості): ${incomeTax}</p>`)    
+    </script>
+  </body>
+</html>

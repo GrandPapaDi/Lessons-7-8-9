@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+    <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+    <script>
+      //1.Вводимо необхідні дані
+      let smLine = parseInt(prompt("Введіть довжину у сантиметрах", "0"));
+
+      //2.Знаходимо результат
+      let mLine = smLine / 100;
+      let kmLine = mLine / 1000;
+
+      //3.Виводимо результат
+      document.write(
+        `${smLine} см = ${mLine}  м </br> ${smLine} см = ${kmLine} км`
+      );
+    </script>
+  </body>
+</html>

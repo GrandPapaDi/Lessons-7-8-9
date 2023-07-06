@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 2</h1>
+    <p>
+      З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не
+      вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то
+      пропонуємо купити лотерею за 4 грн.
+    </p>
+    <script>
+      //1.Введення величин
+      let productPrice = parseFloat(prompt("Введіть ціну товару"));
+      let howManyManey = parseFloat(prompt("Введіть cкільки у Вас грошей"));
+
+      //2.Розв"язок задачі
+      if (productPrice > howManyManey) {
+        document.write("Покупку не підтвердженно");
+      } else if (howManyManey - productPrice >= 4) {
+        confirm("Бажаєте купити лотерейний квиток за 4 грн?");
+        document.write("Дякуємо за покупку!!! Приходьте ще!!!");
+      } else {
+        document.write("Дякуємо за покупку!!! Приходьте ще!!!");
+      }
+    </script>
+  </body>
+</html>

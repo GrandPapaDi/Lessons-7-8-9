@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+      // 1. Вводимо необхідні дані
+      let beerPrice = parseFloat(prompt("Введіть ціну пива", 0));
+      let beerUnits = parseInt(prompt("Введіть кількість пляшок пива", 0));
+
+      let fishPrice = parseFloat(prompt("Введіть ціну за одину рибу", 0));
+      let fishUnits = parseInt(prompt("Введіть кількість риби", 0));
+
+      let eggPrice = parseFloat(prompt("Введіть ціну за одине яйце", 0));
+      let eggUnits = parseInt(prompt("Введіть кількість яєць", 0));
+
+      // 2. Знаходимо результат
+
+      let beerTotalPrice = beerPrice * beerUnits;
+      let fishTotalPrice = fishPrice * fishUnits;
+      let eggTotalPrice = eggPrice * eggUnits;
+      let totalPrice = beerTotalPrice + fishTotalPrice + eggTotalPrice;
+
+      // 3. Виводимо результат
+
+      document.write(`
+      <h4>CHECK</h4>
+      
+      <table>
+      	<tr>
+      		<th>Product</th>
+            <th>Price</th>
+      		<th>Amount</th>      		
+            <th>Sum</th>          
+        
+
+      	</tr>
+      	<tr>
+      		<th>Beer</th>
+            <th>${beerPrice} stk.</th>
+      		<th>${beerUnits} stk.</th>
+      		<th>${beerTotalPrice.toFixed(2)} $</th>
+      	</tr>
+      		<th>Fish</th>
+            <th>${fishPrice} stk.</th>
+      		<th>${fishUnits} stk.</th>
+      		<th>${fishTotalPrice.toFixed(2)} $</th>
+      	</tr>
+      		<tr>
+      			<th>Egg</th>
+            <th>${eggPrice} stk.</th>
+      		<th>${eggUnits} stk.</th>
+      		<th>${eggTotalPrice.toFixed(2)} $</th>
+      		</tr>
+      		<th>Total Price ${totalPrice.toFixed(2)} $</th>
+      </table>      
+      `);
+    </script>
+  </body>
+</html>

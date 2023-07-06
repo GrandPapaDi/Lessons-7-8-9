@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 5.</h1>
+  <p>
+    Інвестор вклав тис. грн на 20 років під 20% річних.
+    Визначити за допомогою циклів суму, яку він одержить (без
+    оподаткування).
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані 
+    const depositPersentage = 20
+    let depositMoney = parseInt(prompt("Введіть суму вашого вкладу"))
+    let depositIncome = 0
+
+    //2.Розв"язок задачі
+    for (let q = 1; q <= 20; q++) {
+      depositIncome = depositIncome + depositMoney * depositPersentage / 100
+    }
+
+
+    //3.Виводимо результат
+    document.write(`Сума вашого вкладу становить: ${depositMoney}грн.<br>
+    Річна ставка становить: ${depositPersentage}%.<br> 
+    Сума,яку ви можете отримати через 20 років становить: ${depositIncome}. `)
+
+  </script>
+</body>
+
+</html>

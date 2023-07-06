@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 0.</h1>
+  <p>
+    0. Вивести на екран<br>
+    A B C D E <br>
+    B C D E F<br>
+    C D E F G<br>
+    D E F G H<br>
+    E F G H I<br>
+  </p>
+  <script>
+    //1.Введення величин,2.Розв"язок задачі
+    for (let q = 65; q <= 69; q++) {
+      for (let w = 0; w < 5; w++) { document.write(` ${String.fromCharCode(q + w)}`) }
+      //3.Виводимо результат
+      document.write(`<br>`)
+    }              
+  </script>
+</body>
+
+</html>

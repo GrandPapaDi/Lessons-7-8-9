@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 0</h1>
+    <p>Обчислити значення виразів</p>
+    <script>
+      //1.Вводимо необхідні дані
+      let num1 = parseInt(prompt("Введіть число a", "0"));
+      let num2 = parseInt(prompt("Введіть число b", "0"));
+      let num3 = parseFloat(prompt("Введіть число c", "0"));
+
+      //2.Знаходимо результат
+      let S1 = num1 + 12 + num2;
+      let S2 = Math.sqrt((num1 + num2) / (2 * num1));
+      let S3 = Math.cbrt((num1 + num2) * num3);
+      let S4 = Math.sin(num1 / -num2);
+
+      //3.Виводимо результат
+      document.write(
+        `S1 = ${S1} <br> S2 = ${S2.toFixed(2)} <br> S3 = ${S3.toFixed(
+          2
+        )} <br> S4=${S4}`
+      );
+    </script>
+  </body>
+</html>
