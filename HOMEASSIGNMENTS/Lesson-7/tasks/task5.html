@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 4.</h1>
+  <p>
+    Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+    результатів: кількість парних, кількість додатних, кількість більших за
+    100.
+  </p>
+
+  <script>
+    // Функція для знаходження кількості парних чисел
+    function evenNum(numFirst, numSecond, numThird) {
+      let res = 0;
+      if (numFirst % 2 === 0) {
+        res++;
+      }
+      if (numSecond % 2 === 0) {
+        res++;
+      }
+      if (numThird % 2 === 0) {
+        res++;
+      }
+      return res;
+    }
+
+    // Функція для знаходження кількості додатних чисел
+    function positiveNum(numFirst, numSecond, numThird) {
+      let res = 0;
+      if (numFirst > 0) {
+        res++;
+      }
+      if (numSecond > 0) {
+        res++;
+      }
+      if (numThird > 0) {
+        res++;
+      }
+      return res;
+    }
+
+    // Функція для знаходження кількості чисел більших за 100
+    function greaterThanOneHundred(numFirst, numSecond, numThird) {
+      let res = 0;
+      if (numFirst > 100) {
+        res++;
+      }
+      if (numSecond > 100) {
+        res++;
+      }
+      if (numThird > 100) {
+        res++;
+      }
+      return res;
+    }
+
+    let numFirst = parseInt(prompt("Введіть перше число."));
+    let numSecond = parseInt(prompt("Введіть друге число."));
+    let numThird = parseInt(prompt("Введіть трете число."));
+
+    const evenCount = evenNum(numFirst, numSecond, numThird);
+    const positiveCount = positiveNum(numFirst, numSecond, numThird);
+    const greaterThanOneHundredCount = greaterThanOneHundred(numFirst, numSecond, numThird);
+
+    document.write("Кількість парних чисел =", evenCount);
+    document.write(`<br>`)
+    document.write("Кількість додатних чисел =", positiveCount);
+    document.write(`<br>`)
+    document.write("Кількість чисел більших за 100 =", greaterThanOneHundredCount);
+
+  </script>
+</body>
+
+</html>

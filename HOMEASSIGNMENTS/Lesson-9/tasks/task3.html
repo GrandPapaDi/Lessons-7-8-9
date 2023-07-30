@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 3.</h1>
+  <p>
+    Користувач вводить кількість елементів. Створити масив, у якому перші 5 елементів заповнені 1-цями, а інші до кінця
+    масиву заповнені 7-ками.
+  </p>
+  <script>
+
+    //1.Вводимо необхідні дані 
+    let numberOfElement = parseInt(prompt("Введіть кількість елементів:"));
+
+    //2.Розв"язок задачі
+    let array = [];
+    let index = 0;
+    for (let element of Array(numberOfElement)) {
+      if (index < 5) {
+        array.push(1);
+      } else {
+        array.push(7);
+      }
+      index++;
+    }
+
+    //3.Виводимо результат
+    document.write(array);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 5.</h1>
+  <p>
+    Дано послідовність оцінок учня. Підрахувати кількість:<br>
+    1) двійок<br>
+    2) кількість хороших оцінок (добре, відмінно)<br>
+    3) кількість оцінок, які нижче середнього.
+
+  </p>
+  <script>
+
+    //1.Вводимо необхідні дані
+    const studentGrades = [3, 5, 4, 2, 5, 3, 5, 4, 3, 3, 2];
+
+    //2.Розв"язок задачі
+    function countDeuces(scores) {
+      let count = 0;
+      for (let i = 0; i < scores.length; i++) {
+        if (scores[i] === 2) {
+          count++;
+        }
+      }
+      return count;
+    }
+    let badGrade = countDeuces(studentGrades);
+
+    function countGoodGrades(scores) {
+      let count = 0;
+      for (let i = 0; i < scores.length; i++) {
+        const score = scores[i];
+        if (score === 4 || score === 5) {
+          count++;
+        }
+      }
+      return count;
+    }
+    let goodGrades = countGoodGrades(studentGrades);
+
+    function countBelowAverageGrades(scores) {
+      let count = 0;
+      let sum = 0;
+      for (let i = 0; i < scores.length; i++) {
+        sum += scores[i];
+      }
+      const average = sum / scores.length;
+
+      for (let i = 0; i < scores.length; i++) {
+        if (scores[i] < average) {
+          count++;
+        }
+      }
+      return count;
+    }
+    let belowAverageGrades = countBelowAverageGrades(studentGrades);
+
+    //3.Виводимо результат
+    document.write(`Кількість двійок = ${badGrade}`);
+    document.write(`<br>`);
+    document.write(`Кількість хороших оцінок (добре, відмінно) = ${goodGrades}`);
+    document.write(`<br>`);
+    document.write(`Кількість оцінок, які нижче середнього = ${belowAverageGrades}`);
+
+  </script>
+</body>
+
+</html>

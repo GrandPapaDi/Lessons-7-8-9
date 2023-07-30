@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 6.</h1>
+  <p>
+    Дано послідовність цін товарів та назв (у окремих масивах). Вивести на екран ті, які може собі дозволити користувач
+    (кількість грошей задається).
+  </p>
+
+  <script>
+    const prices = [10, 20, 30, 40, 50];
+    const products = ['Хліб', 'Шкарпетки', 'Арахіс', 'Пиво', 'Ковбаса'];
+    let userMoney = parseInt(prompt(`Вкажіть суму грошей, яку може собі дозволити користувач `))
+
+    function affordableProducts(userMoney, prices, products) {
+      document.write('Товари, які ви можете собі дозволити:');
+      document.write('<br>');
+
+      for (let i = 0; i < prices.length; i++) {
+        if (prices[i] <= userMoney) {
+          document.write(`${products[i]} - ${prices[i]}`);
+          document.write('<br>');
+        }
+      }
+    }
+    affordableProducts(userMoney, prices, products)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Задача 6.</h1>
+  <p>
+    Дано масив елементів. Усі елементи, які більші за перший елемент
+    помножити на 2
+  </p>
+  <script>
+
+    //1.Вводимо необхідні дані
+    let arr = [7, 9, 20, 66, 1, 2, 27, 10, 62, 78, 3, 45]
+
+    //2.Розв"язок задачі
+    function getFirstElem(arr) {
+      let firstElement = arr[0]
+      arr.forEach((element, index, arr) => { if (element > firstElement) arr[index] *= 2 })
+      return arr
+    }
+
+    //3.Виводимо результат
+    document.write(`Дано масив елементів [${arr}]<br>`)
+    let result = getFirstElem(arr)
+    document.write(`Бачимо результат ${result}`)
+
+  </script>
+</body>
+
+</html>

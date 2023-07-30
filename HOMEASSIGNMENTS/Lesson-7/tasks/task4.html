@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Задача 3.</h1>
+    <p>
+      Створити окремі функції, які для 4 чисел знаходять:<br />
+      1)суму;<br />
+      2)добуток;<br />
+      3)середнє арифметичне;<br />
+      4)мінімальне значення.
+    </p>
+    <script>
+      //1.Вводимо необхідні дані
+      function getSum(numFirst, numSecond, numThird, numFours) {
+        let res = numFirst + numSecond + numThird + numFours;
+        return res;
+      }
+      function getProd(numFirst, numSecond, numThird, numFours) {
+        let res = numFirst * numSecond * numThird * numFours;
+        return res;
+      }
+      function arithMean(numFirst, numSecond, numThird, numFours) {
+        let res = (numFirst + numSecond + numThird + numFours) / 4;
+        return res;
+      }
+      function minValue(numFirst, numSecond, numThird, numFours) {
+        let res = Math.min(numFirst, numSecond, numThird, numFours);
+        return res;
+      }
+
+      //2.Розв"язок задачі
+      let numFirst = parseInt(prompt("Введіть перше число."));
+      let numSecond = parseInt(prompt("Введіть друге число."));
+      let numThird = parseInt(prompt("Введіть трете число."));
+      let numFours = parseInt(prompt("Введіть четверте число."));
+      //3.Виводимо результат
+      document.write(
+        `Сума заданих чисел дорівнює = ${getSum(
+          numFirst,
+          numSecond,
+          numThird,
+          numFours
+        )}<br>`
+      );
+      document.write(
+        `Добуток заданих чисел дорівнює = ${getProd(
+          numFirst,
+          numSecond,
+          numThird,
+          numFours
+        )}<br>`
+      );
+      document.write(
+        `Середне арифметичне заданих чисел дорівнює = ${arithMean(
+          numFirst,
+          numSecond,
+          numThird,
+          numFours
+        )}<br>`
+      );
+      document.write(
+        `Мінімальне значення заданих чисел дорівнює = ${minValue(
+          numFirst,
+          numSecond,
+          numThird,
+          numFours
+        )}`
+      );
+    </script>
+  </body>
+</html>

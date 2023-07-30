@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../../../LS-5"
+	},
+	{
+		"path": "../../../../W3S"
+	},
+	{
+		"path": "../../../LS-7"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HOMEASSIGNMENTS"
+  }
+}
